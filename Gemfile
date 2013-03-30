@@ -25,6 +25,10 @@ gem 'meta_search', '>= 1.1.0.pre'     # Required for Active Admin
 gem 'redcarpet'                       # Markdown formatting
 gem 'to_csv'                          # Allows custom CSV rendering
 
+# PERFORMANCE
+gem 'turbolinks'                      # PJAX-like workflow for page changes
+
+
 # PRODUCTION-ONLY GEMS
 group :production do
   gem 'newrelic_rpm'                  # New Relic performance monitoring
@@ -49,7 +53,6 @@ end
 # gem 'oj', '~> 1.3.0'                  # Speeds up Twitter gem
 
 # OTHER USEFULS
-# gem 'turbolinks'                      # PJAX-like workflow for page changes
 # gem 'color'                           # Hex/RGB color manipulation and math
 # gem 'dynamic_form'                    # Add error classes to form elements
 # gem 'exception_notification'          # Email exceptions raised in production to someone
