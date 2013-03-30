@@ -1,0 +1,5 @@
+.ruby-version
+app/assets/raws
+doc
+env-template
+README.md
