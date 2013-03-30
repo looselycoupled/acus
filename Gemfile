@@ -28,6 +28,8 @@ gem 'to_csv'                          # Allows custom CSV rendering
 # PERFORMANCE
 gem 'turbolinks'                      # PJAX-like workflow for page changes
 
+gem "twitter-bootstrap-rails"
+
 
 # PRODUCTION-ONLY GEMS
 group :production do
