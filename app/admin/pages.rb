@@ -10,6 +10,7 @@ ActiveAdmin.register Page do
 
   index do
     column :title 
+    column :parent
     column :created_at
     column :updated_at
     column :view_in_site do |p|
@@ -21,6 +22,17 @@ ActiveAdmin.register Page do
   form do |f|
     f.inputs "Details" do
       f.input :title
+
+      if resource.id
+        # parent listing should not include current node or it's descendants
+        illegal_ids = resource.descendant_ids.append(resource.id)
+        pages = Page.arrange_as_array.reject{|p| illegal_ids.include? p.id}.collect {|n|  ["#{'-' * n.depth} #{n.title}", n.id] }
+      else
+        pages = Page.arrange_as_array.collect {|p|  ["#{'-' * p.depth} #{p.title}", p.id] }
+      end
+      f.input :parent_id, :as => :select, :collection => pages
+
+
       f.input :teaser, :input_html => {:rows => 4}
       f.input :content, :input_html => {:class => "ckeditor"}
     end
