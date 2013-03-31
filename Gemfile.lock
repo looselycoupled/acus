@@ -40,6 +40,8 @@ GEM
     activesupport (3.2.13)
       i18n (= 0.6.1)
       multi_json (~> 1.0)
+    ancestry (1.3.0)
+      activerecord (>= 2.3.14)
     arbre (1.0.1)
       activesupport (>= 3.0.0)
     arel (3.0.2)
@@ -71,6 +73,9 @@ GEM
     bullet (4.5.0)
       uniform_notifier
     chunky_png (1.2.8)
+    ckeditor (4.0.2)
+      mime-types
+      orm_adapter
     climate_control (0.0.3)
       activesupport (>= 3.0)
     cocaine (0.5.1)
@@ -102,6 +107,7 @@ GEM
     fastercsv (1.5.5)
     formtastic (2.2.1)
       actionpack (>= 3.0)
+    friendly_id (4.0.9)
     fssm (0.2.10)
     haml (4.0.1)
       tilt
@@ -236,15 +242,18 @@ PLATFORMS
 
 DEPENDENCIES
   activeadmin (~> 0.5.0)
+  ancestry
   aws-sdk
   better_errors
   binding_of_caller
   bourbon
   brakeman
   bullet
+  ckeditor (~> 4.0.2)
   coffee-rails (~> 3.2)
   compass-rails
   dalli
+  friendly_id (~> 4.0.9)
   holepicker
   meta_search (>= 1.1.0.pre)
   newrelic_rpm

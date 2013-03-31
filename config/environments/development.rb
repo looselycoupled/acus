@@ -35,6 +35,7 @@ Shortline::Application.configure do
   config.assets.debug = true
 
   # Log to a flatfile
-  Rails.logger = Logger.new("log/development.log")
+  # Rails.logger = Logger.new("log/development.log")
+  config.logger = Logger.new(STDOUT)
 
 end

@@ -29,6 +29,9 @@ gem 'to_csv'                          # Allows custom CSV rendering
 gem 'turbolinks'                      # PJAX-like workflow for page changes
 
 gem "twitter-bootstrap-rails"
+gem 'ancestry'                        # Adds tree behavior
+gem 'ckeditor', '~> 4.0.2'            # Adds integration for CKEditor
+gem "friendly_id", "~> 4.0.9" # Note: You MUST use 4.0.9 or greater for Rails 3.2.10+
 
 
 # PRODUCTION-ONLY GEMS
