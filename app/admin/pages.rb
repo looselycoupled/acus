@@ -5,8 +5,6 @@ ActiveAdmin.register Page do
     defaults finder: :find_by_slug
   end
 
-  menu :parent => "Primary Content", :priority => 80
-  
   config.sort_order = "ancestry_desc"
 
 
