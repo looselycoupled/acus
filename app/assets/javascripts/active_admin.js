@@ -1,4 +1,5 @@
 //= require active_admin/base
+//= require ckeditor/init
 
 // FRAME BUSTER
 // Security: forbid the admin screens from being loaded into a frameset

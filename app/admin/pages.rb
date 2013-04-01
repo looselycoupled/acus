@@ -34,6 +34,7 @@ ActiveAdmin.register Page do
 
 
       f.input :teaser, :input_html => {:rows => 4}
+      
       f.input :content, :input_html => {:class => "ckeditor"}
     end
 
