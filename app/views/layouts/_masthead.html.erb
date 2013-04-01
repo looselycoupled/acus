@@ -1,0 +1,14 @@
+<div class="masthead">
+  <h3 class="muted">Cyber Resource Library</h3>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container">
+        <ul class="nav">
+        <% Page.roots.order(:menu_priority).each do |p| %>
+					<li><%= link_to p.title, "/" + p.slug, :class => ((request.fullpath.split("/").second == p.slug) ? "selected" : "") %></li>
+				<% end %>
+        </ul>
+      </div>
+    </div>
+  </div><!-- /.navbar -->
+</div>
