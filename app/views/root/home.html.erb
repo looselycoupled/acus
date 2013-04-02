@@ -9,7 +9,8 @@
     <ul>
       <% @features.each do |f| %>
     <li class="span4">
-        <img src="http://placehold.it/300x200" alt="">
+        
+        <%= image_tag f.image.url(:full) %>
         <h2><%= f.title %></h2>
         <%= simple_format f.content %>
         <p><%= link_to f.link_text, f.link %></p>

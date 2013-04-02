@@ -1,5 +1,10 @@
 class HomepageFeature < ActiveRecord::Base
-  attr_accessible :content, :link, :link_text, :super_title, :title
+  attr_accessible :content, :link, :link_text, :super_title, :title, :image
+
+  has_attached_file :image, 
+    :url => "/features/:id/:basename-:style.:extension",
+    :path => "/features/:id/:basename-:style.:extension",
+    :styles => { :full => ["300x200#", :png] }
 
   # SCOPES
   
