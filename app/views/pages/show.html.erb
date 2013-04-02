@@ -1,6 +1,8 @@
-<div class="row-fluid">
-    <div class="span3">
-        <h2><%= link_to @page.root.title, "/#{@page.root.slug}", :class => ((@page == @page.root) ? 'active' : '')  %></h2> 
+<div class="container page">
+  <div class="row-fluid">
+  
+    <div class="span2">
+        <h4><%= link_to @page.root.title, "/#{@page.root.slug}", :class => ((@page == @page.root) ? 'active' : '')  %></h4> 
         <ul class="nav nav-pills nav-stacked">
     		<% @page.root.children.order(:menu_priority).each do |child| %>
             <li>
@@ -17,15 +19,17 @@
         </ul>    
     </div>
 
-    <div class="span6 well">
+    <div class="span10">
         <h1><%= @page.title %></h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum justo at erat elementum in tempor nibh vehicula. Maecenas tincidunt semper egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu sapien justo, nec scelerisque sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Vivamus eu erat sem. Etiam at ante enim. </p> 
+
+        <div class="span3 well" style="float : right">
+          <h4>Other content</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum justo at erat elementum in tempor nibh vehicula. Maecenas tincidunt semper egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. </p> 
+        </div>
+
         <%= @page.content.html_safe %>
     </div>
     
-    <div class="span3 ">
-        <h2>Other content</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus bibendum justo at erat elementum in tempor nibh vehicula. Maecenas tincidunt semper egestas. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu sapien justo, nec scelerisque sapien. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; In hac habitasse platea dictumst. Vivamus eu erat sem. Etiam at ante enim. </p> 
-        <p>Nunc adipiscing auctor aliquet.  Phasellus ultricies eros sed enim lacinia interdum. Quisque risus metus, lacinia ac egestas sit amet, interdum in velit. Sed mattis porta est, vitae laoreet lectus viverra lobortis. Mauris pretium elit eu metus pellentesque gravida. Praesent tincidunt bibendum ipsum sit amet lacinia. Duis vel ultrices orci. Nam vitae enim ut eros dignissim lobortis. Praesent eu lectus quis nisi viverra laoreet. Duis fringilla interdum odio quis adipiscing. Donec et nunc mi. Aliquam fermentum lobortis ultrices. Sed adipiscing rhoncus odio ac vehicula. Sed lobortis, leo non iaculis tempus.</p> 
-        
-    </div>
+  </div>
 </div>
