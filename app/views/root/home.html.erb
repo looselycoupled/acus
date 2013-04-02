@@ -1,40 +1,46 @@
 <!-- Main hero unit for a primary marketing message or call to action -->
-<div class="hero-unit">
+<!-- <div class="hero-unit">
   <h1>Cyber Resources</h1>
   <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
   <p><a href="#" class="btn btn-primary btn-large">View Resources &raquo;</a></p>
-</div>
+</div> -->
 
-<!-- Example row of columns -->
-<div class="row-fluid">
-  <% @features.each do |f| %>
-  <div class="span4">
-    <h2><%= f.title %></h2>
-    <%= simple_format f.content %>
-    <p><%= link_to f.link_text, f.link %></p>
+<%= render 'carousel' %>
+
+<div class="container">
+
+  <!-- Example row of columns -->
+  <div class="row-fluid">
+    <% @features.each do |f| %>
+    <div class="span4">
+      <h2><%= f.title %></h2>
+      <%= simple_format f.content %>
+      <p><%= link_to f.link_text, f.link %></p>
+    </div>
+    <% end %>
   </div>
-  <% end %>
-</div>
 
 
-<div class="row-fluid">
-  <div class="span8">
-    <h2>Event Feed</h2>
-    <ul>
-        <li>
-            <h4>NATO SECU Conference</h4>
-            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn" href="#">View details &raquo;</a></p>
-        </li>
-        <li>
-            <h4>Lorem Ipsum Panel</h4>
-            <p>Gorta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-            <p><a class="btn" href="#">View details &raquo;</a></p>
-        </li>
-    </ul>
+  <div class="row-fluid">
+    <div class="span8">
+      <h2>Event Feed</h2>
+      <ul>
+          <li>
+              <h4>NATO SECU Conference</h4>
+              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+          </li>
+          <li>
+              <h4>Lorem Ipsum Panel</h4>
+              <p>Gorta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+              <p><a class="btn" href="#">View details &raquo;</a></p>
+          </li>
+      </ul>
+    </div>
+    <div class="span4 well">
+      <h2>About the Atlantic Council</h2>
+      <p>Since its founding in 1961-1962, the Council has been a preeminent, non partisan institution devoted to promoting transatlantic cooperation and international security.  Now in its 50th year, the Atlantic Council is harnessing that history of transatlantic leadership and applying its founders’ vision to a broad spectrum of modern global challenges from violent extremism to financial instability and from NATO’s future to energy security.</p>
+    </div>
   </div>
-  <div class="span4 well">
-    <h2>About the Atlantic Council</h2>
-    <p>Since its founding in 1961-1962, the Council has been a preeminent, non partisan institution devoted to promoting transatlantic cooperation and international security.  Now in its 50th year, the Atlantic Council is harnessing that history of transatlantic leadership and applying its founders’ vision to a broad spectrum of modern global challenges from violent extremism to financial instability and from NATO’s future to energy security.</p>
-  </div>
+
 </div>
