@@ -6,6 +6,11 @@
   =require twitter-bootstrap-static/fontawesome
   */
 
+
+.clear {
+  clear : both;
+}
+
 /* Custom container */
 .container {
   margin: 0 auto;
@@ -118,3 +123,53 @@ div.page.container {
 .carousel-caption .btn {
   margin-top: 10px;
 }
+
+
+/* FOOTER */
+
+footer {
+  border-top : 1px solid black;
+  background-color : #eee;
+  margin-top : 60px;
+  padding : 10px 20px 60px 20px;
+}
+
+footer > div {
+/*  background-color : #ccc;*/
+  margin : auto;
+  max-width : 1000px;
+  padding : 0 20px 0 20px;
+}
+
+footer .contact-info {
+  float : left;
+}
+
+footer .impact {
+  float : right;
+}
+
+footer .impact h3 {
+  text-align : right;
+  text-transform : uppercase;
+}
+
+
+footer h3 {
+  margin-bottom : 0;
+  font-size : 18px;
+  line-height : 1.3;
+}
+
+footer .address, footer a {
+  font-size : 12px;
+}
+
+
+
+
+
+
+
+
+
