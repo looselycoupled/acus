@@ -5,13 +5,17 @@
   <%= bootstrap_flash %>
 
   <!-- Example row of columns -->
-  <div class="row-fluid">
-    <ul>
+  <div class="row-fluid features-row">
+    <ul class="features">
       <% @features.each do |f| %>
-    <li class="span4">
-        
-        <%= image_tag f.image.url(:full) %>
-        <h2><%= f.title %></h2>
+    <li class="span4 feature">
+        <div>
+          <% unless f.super_title.blank? %>
+          <span class="super-header"><%= f.super_title %></span>
+          <% end %>
+        </div>
+        <%= link_to(image_tag(f.image.url(:full)), f.link) %>
+        <h2><%= link_to f.title, f.link %></h2>
         <%= simple_format f.content %>
         <p><%= link_to f.link_text, f.link %></p>
     </li>
@@ -20,26 +24,26 @@
   </div>
 
 
-  <div class="row-fluid">
+  <div class="row-fluid feed-row">
     
-    <div class="span8">
+    <div class="span8 feed-container">
       <h2>Latest News</h2>
       <ul>
           <li>
               <h4>NATO SECU Conference</h4>
               <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
+              <p><a href="#">View details &raquo;</a></p>
           </li>
           <li>
               <h4>Lorem Ipsum Panel</h4>
               <p>Gorta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
+              <p><a href="#">View details &raquo;</a></p>
           </li>
       </ul>
     </div>
     
-    <div class="span4 well">
-      <h2>About the Atlantic Council</h2>
+    <div class="span4 info-container">
+      <h3>More Information</h3>
       <p>Since its founding in 1961-1962, the Council has been a preeminent, non partisan institution devoted to promoting transatlantic cooperation and international security.  Now in its 50th year, the Atlantic Council is harnessing that history of transatlantic leadership and applying its founders’ vision to a broad spectrum of modern global challenges from violent extremism to financial instability and from NATO’s future to energy security.</p>
     </div>
 

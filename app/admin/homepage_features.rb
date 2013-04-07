@@ -16,8 +16,7 @@ ActiveAdmin.register HomepageFeature do
       f.input :content, :input_html => {:rows => 4}
 
       if f.object.persisted? && f.object.image.file?
-        f.input :image_file_name, :label => 'Existing File', :as => :warning, :value => image_tag(f.object.image.url(:full))
-        f.input :image, :label => 'Replace File'
+        f.input :image, :label => 'Replace File', :hint => image_tag(f.object.image.url(:thumbnail))
       else
         f.input :image, :hint => "Image will automatically be cropped and resized down to 300x200 pixels.  Please upload a file with a 3x2 aspect ratio."
       end

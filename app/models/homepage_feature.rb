@@ -4,7 +4,7 @@ class HomepageFeature < ActiveRecord::Base
   has_attached_file :image, 
     :url => "/features/:id/:basename-:style.:extension",
     :path => "/features/:id/:basename-:style.:extension",
-    :styles => { :full => ["300x200#", :png] }
+    :styles => { :full => ["300x200#", :png], :thumbnail => ["150x100#", :png] }
 
   # SCOPES
   
