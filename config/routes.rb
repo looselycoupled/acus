@@ -3,6 +3,7 @@ Shortline::Application.routes.draw do
   get "pages/show"
 
   get "resources", :to => 'resources#index'
+  get "resources/:id", :to => 'resources#show', :as => :resource
 
   mount Ckeditor::Engine => '/ckeditor'
 
