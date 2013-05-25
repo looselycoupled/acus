@@ -48,6 +48,7 @@ group :development do
   gem 'bullet'                        # Reporting on N+1 and unoptimized queries
   gem 'holepicker'                    # Check for security vulnerable gems
   gem 'yard'                          # Generate nice documentation
+  gem 'faker'
 end
 
 # VALIDATORS
