@@ -221,6 +221,40 @@ ALTER SEQUENCE pages_id_seq OWNED BY pages.id;
 
 
 --
+-- Name: resources; Type: TABLE; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE TABLE resources (
+    id integer NOT NULL,
+    title character varying(255),
+    slug character varying(255),
+    teaser text,
+    content text,
+    created_at timestamp without time zone NOT NULL,
+    updated_at timestamp without time zone NOT NULL
+);
+
+
+--
+-- Name: resources_id_seq; Type: SEQUENCE; Schema: public; Owner: -
+--
+
+CREATE SEQUENCE resources_id_seq
+    START WITH 1
+    INCREMENT BY 1
+    NO MINVALUE
+    NO MAXVALUE
+    CACHE 1;
+
+
+--
+-- Name: resources_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: -
+--
+
+ALTER SEQUENCE resources_id_seq OWNED BY resources.id;
+
+
+--
 -- Name: schema_migrations; Type: TABLE; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -265,6 +299,13 @@ ALTER TABLE ONLY pages ALTER COLUMN id SET DEFAULT nextval('pages_id_seq'::regcl
 
 
 --
+-- Name: id; Type: DEFAULT; Schema: public; Owner: -
+--
+
+ALTER TABLE ONLY resources ALTER COLUMN id SET DEFAULT nextval('resources_id_seq'::regclass);
+
+
+--
 -- Name: admin_notes_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
 --
 
@@ -302,6 +343,14 @@ ALTER TABLE ONLY homepage_features
 
 ALTER TABLE ONLY pages
     ADD CONSTRAINT pages_pkey PRIMARY KEY (id);
+
+
+--
+-- Name: resources_pkey; Type: CONSTRAINT; Schema: public; Owner: -; Tablespace: 
+--
+
+ALTER TABLE ONLY resources
+    ADD CONSTRAINT resources_pkey PRIMARY KEY (id);
 
 
 --
@@ -402,3 +451,5 @@ INSERT INTO schema_migrations (version) VALUES ('20130330235741');
 INSERT INTO schema_migrations (version) VALUES ('20130331024934');
 
 INSERT INTO schema_migrations (version) VALUES ('20130402143405');
+
+INSERT INTO schema_migrations (version) VALUES ('20130525013736');

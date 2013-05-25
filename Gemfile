@@ -10,6 +10,7 @@ gem 'seed-fu', '~> 2.1'               # Database seeding plans
 gem 'dalli'                           # Memcached integration
 gem 'paperclip', '~> 3.4.0'           # Uploaded asset management and thumbnail processing
 gem 'aws-sdk'                         # Required for Paperclip to talk to Amazon S3
+gem 'pg_search'                       # Allows for easier PG full text searching
 
 # ASSET PIPELINE
 gem 'bourbon'                         # Sass mixins from Thoughtbot

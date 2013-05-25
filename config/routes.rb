@@ -2,6 +2,8 @@ Shortline::Application.routes.draw do
 
   get "pages/show"
 
+  get "resources", :to => 'resources#index'
+
   mount Ckeditor::Engine => '/ckeditor'
 
   get "root/home"
