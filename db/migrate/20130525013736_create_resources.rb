@@ -5,8 +5,9 @@ class CreateResources < ActiveRecord::Migration
       t.string :slug
       t.text :teaser
       t.text :content
-
+      t.attachment :photo
       t.timestamps
     end
+    add_index :resources, :slug
   end
 end

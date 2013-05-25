@@ -57,4 +57,16 @@ module Shortline
     # config.active_record.observers = :cacher, :garbage_collector, :forum_observer
 
   end
+
+  # load constants that were set in initializer
+  @application_constants = OpenStruct.new
+
+  def self.const
+    @application_constants
+  end
+
+  def self.set_application_constants(&block)
+    yield self.const
+  end
+
 end

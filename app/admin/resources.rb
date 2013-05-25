@@ -18,6 +18,8 @@ ActiveAdmin.register Resource do
       f.input :title
       f.input :teaser, :input_html => {:rows => 4}
       f.input :content, :input_html => {:class => "ckeditor"}
+      f.input :photo,
+        hint: image_preview_hint(resource.photo.url(:thumbnail))  
     end
 
     f.buttons

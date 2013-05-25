@@ -230,6 +230,10 @@ CREATE TABLE resources (
     slug character varying(255),
     teaser text,
     content text,
+    photo_file_name character varying(255),
+    photo_content_type character varying(255),
+    photo_file_size integer,
+    photo_updated_at timestamp without time zone,
     created_at timestamp without time zone NOT NULL,
     updated_at timestamp without time zone NOT NULL
 );
@@ -421,6 +425,13 @@ CREATE INDEX index_pages_on_ancestry ON pages USING btree (ancestry);
 --
 
 CREATE UNIQUE INDEX index_pages_on_slug ON pages USING btree (slug);
+
+
+--
+-- Name: index_resources_on_slug; Type: INDEX; Schema: public; Owner: -; Tablespace: 
+--
+
+CREATE INDEX index_resources_on_slug ON resources USING btree (slug);
 
 
 --
