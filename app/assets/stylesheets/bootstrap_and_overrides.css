@@ -7,6 +7,10 @@
   */
 
 
+body {
+  background-color : #eee;
+}
+
 .clear {
   clear : both;
 }
@@ -24,19 +28,24 @@ div.page.container {
   margin-top : 100px;
 }
 
+.wrapper {
+  background-color : white;
+  padding-bottom : 60px;
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
 
 /* Special class on .container surrounding .navbar, used for positioning it into place. */
 .navbar-wrapper {
+  background-color : white;
+  left: 0;
+  margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
+  padding: 20px 0;
   position: absolute;
   top: 0;
-  left: 0;
   right: 0;
   z-index: 10;
-  margin-top: 20px;
-  margin-bottom: -90px; /* Negative margin to pull up carousel. 90px is roughly margins and height of navbar. */
 }
 .navbar-wrapper .navbar {
 
@@ -170,7 +179,6 @@ div.page.container {
 footer {
   border-top : 1px solid black;
   background-color : #eee;
-  margin-top : 60px;
   padding : 10px 20px 60px 20px;
 }
 

@@ -16,10 +16,12 @@
 
   </head>
   <body>
+    <div class="wrapper">
     <%= render 'layouts/navbar' %>
           
     <%= yield %>
-      
+    
+    </div>
     <%= render 'layouts/footer' %>
     <%= javascript_include_tag "application" %>
   </body>
