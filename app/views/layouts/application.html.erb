@@ -5,7 +5,7 @@
     <div class="wrapper">
       <%= content_for?(:main) ? yield(:main) : yield %>
     </div>
-    <%= render 'layouts/footer' %>
+    <%= render 'shared/footer' %>
     <%= javascript_include_tag "application" %>
   </body>
 </html>
