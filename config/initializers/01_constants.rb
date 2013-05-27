@@ -10,6 +10,8 @@
 
 Shortline.set_application_constants do |const|
 
+  const.site_name = "ACUS Cyber Resource Library"
+
   # Used to evaluate file uploads when images are required.
   const.valid_image_types = %w[
     image/jpeg

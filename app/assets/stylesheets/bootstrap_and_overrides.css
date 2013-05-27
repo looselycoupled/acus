@@ -47,6 +47,11 @@ div.page.container {
   right: 0;
   z-index: 10;
 }
+.home .navbar-wrapper {
+  background-color : transparent;
+}
+
+
 .navbar-wrapper .navbar {
 
 }

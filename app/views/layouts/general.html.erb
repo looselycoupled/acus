@@ -1,0 +1,9 @@
+<% content_for :main do %>
+  <%= render 'layouts/navbar' %>
+  <div class="container page">
+    <%= render :template => "shared/_header"  %>
+    <%= bootstrap_flash %>
+    <%= yield %>
+  </div>
+<% end %>
+<%= render :template => 'layouts/application' %>

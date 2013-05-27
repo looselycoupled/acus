@@ -1,5 +1,7 @@
 class ResourcesController < ApplicationController
-  
+
+  layout "general"
+
   def index
     @resources = Resource.all
   end
