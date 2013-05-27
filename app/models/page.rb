@@ -1,14 +1,21 @@
 class Page < ActiveRecord::Base
+
+  include Sluggable
+  has_ancestry
+
+  # Attributes
+  
   attr_accessible :content, :menu_priority, :slug, :teaser, :title, :parent_id
   
-  has_ancestry
   
   # friendly path based on title slug
   extend FriendlyId
   friendly_id :title, use: :slugged
   
-  validates :title, presence: true
-  validates :slug, uniqueness: true #, presence: true , exclusion: {in: %w[signup login]}
+  validates :title, {
+    presence: true,
+    length: { in: 3..100}
+  }
   
   # Associations
   
