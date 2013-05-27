@@ -3,6 +3,8 @@ module Sluggable
 
   included do
 
+    extend FriendlyId
+    
     validates :slug, {
       :uniqueness => true, 
       :presence => true, 

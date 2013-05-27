@@ -7,9 +7,7 @@ class Page < ActiveRecord::Base
   
   attr_accessible :content, :menu_priority, :slug, :teaser, :title, :parent_id
   
-  
   # friendly path based on title slug
-  extend FriendlyId
   friendly_id :title, use: :slugged
   
   validates :title, {
