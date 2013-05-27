@@ -11,6 +11,7 @@ gem 'dalli'                           # Memcached integration
 gem 'paperclip', '~> 3.4.0'           # Uploaded asset management and thumbnail processing
 gem 'aws-sdk'                         # Required for Paperclip to talk to Amazon S3
 gem 'pg_search'                       # Allows for easier PG full text searching
+gem 'faker'
 
 # ASSET PIPELINE
 gem 'bourbon'                         # Sass mixins from Thoughtbot
@@ -48,7 +49,6 @@ group :development do
   gem 'bullet'                        # Reporting on N+1 and unoptimized queries
   gem 'holepicker'                    # Check for security vulnerable gems
   gem 'yard'                          # Generate nice documentation
-  gem 'faker'
 end
 
 # VALIDATORS
