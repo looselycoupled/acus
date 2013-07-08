@@ -101,6 +101,9 @@ GEM
       orm_adapter (~> 0.1)
       railties (~> 3.1)
       warden (~> 1.2.1)
+    dotenv (0.8.0)
+    dotenv-rails (0.8.0)
+      dotenv (= 0.8.0)
     erubis (2.7.0)
     execjs (1.4.0)
       multi_json (~> 1.0)
@@ -259,6 +262,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2)
   compass-rails
   dalli
+  dotenv-rails
   faker
   friendly_id (~> 4.0.9)
   holepicker
